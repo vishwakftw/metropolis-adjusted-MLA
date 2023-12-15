@@ -1,5 +1,5 @@
 # metropolis-adjusted-MLA
-Code for the experiments in the paper
+Code for the experiments in the paper [_Fast sampling from constrained spaces using the Metropolis-adjusted Mirror Langevin Algorithm_](https://arxiv.org/abs/2312.08823).
 
 ### Required packages
 
