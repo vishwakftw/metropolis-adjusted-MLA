@@ -37,5 +37,23 @@ sampler.set_initial_particles(torch.rand(500, 2) * 0.002 - 0.001
 # Perform the mixing for 1000 iterations, with step size 0.05
 # particles is of shape (num_iters, num_samples, dimension)
 # rejects is of shape (num_iters, num_samples)
-particles, rejects = sampler.mix(num_iters=1000, stepsize=0.05, return_particles=True, no_progress=False)
+particles, rejects = sampler.mix(
+  num_iters=1000,
+  stepsize=0.05,
+  return_particles=True,
+  no_progress=False
+)
+```
+
+### Citation
+
+```
+@misc{srinivasan2023fast,
+      title={Fast sampling from constrained spaces using the Metropolis-adjusted Mirror Langevin Algorithm}, 
+      author={Vishwak Srinivasan and Andre Wibisono and Ashia Wilson},
+      year={2023},
+      eprint={2312.08823},
+      archivePrefix={arXiv},
+      primaryClass={stat.CO}
+}
 ```
