@@ -1,5 +1,5 @@
 # metropolis-adjusted-MLA
-Code for the experiments in the paper [_Fast sampling from constrained spaces using the Metropolis-adjusted Mirror Langevin Algorithm_](https://arxiv.org/abs/2312.08823).
+Code for the experiments in the paper [_Fast sampling from constrained spaces using the Metropolis-adjusted Mirror Langevin algorithm_](https://arxiv.org/abs/2312.08823).
 
 ### Required packages
 
@@ -29,29 +29,33 @@ from metromirrorlangevin import algorithms, barriers
 barrier = barriers.BoxBarrier(bounds=torch.tensor([0.01, 1]))
 
 # Define the sampler instance, with number of samples = 500
-sampler = algorithms.mirror_algorithms.UniformSamplerMMRW(barrier=barrier, num_samples=500)
+sampler = algorithms.mirror_algorithms.UniformSamplerMMRW(
+    barrier=barrier,
+    num_samples=500
+)
 
-# Initialise the particles (in the smaller box [-0.001, 0.001] x [-0.001, 0.001]
+# Initialise the particles
+# in the smaller box [-0.001, 0.001] x [-0.001, 0.001]
 sampler.set_initial_particles(torch.rand(500, 2) * 0.002 - 0.001
 
 # Perform the mixing for 1000 iterations, with step size 0.05
 # particles is of shape (num_iters, num_samples, dimension)
 # rejects is of shape (num_iters, num_samples)
 particles, rejects = sampler.mix(
-  num_iters=1000,
-  stepsize=0.05,
-  return_particles=True,
-  no_progress=False
+    num_iters=1000,
+    stepsize=0.05,
+    return_particles=True,
+    no_progress=False
 )
 ```
 
 ### Citation
 
 ```
-@misc{srinivasan2023fast,
-      title={Fast sampling from constrained spaces using the Metropolis-adjusted Mirror Langevin Algorithm}, 
+@misc{srinivasan2024fast,
+      title={Fast sampling from constrained spaces using the Metropolis-adjusted Mirror Langevin algorithm}, 
       author={Vishwak Srinivasan and Andre Wibisono and Ashia Wilson},
-      year={2023},
+      year={2024},
       eprint={2312.08823},
       archivePrefix={arXiv},
       primaryClass={stat.CO}
