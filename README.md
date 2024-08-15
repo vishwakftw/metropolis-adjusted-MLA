@@ -52,12 +52,16 @@ particles, rejects = sampler.mix(
 ### Citation
 
 ```
-@misc{srinivasan2024fast,
-      title={Fast sampling from constrained spaces using the Metropolis-adjusted Mirror Langevin algorithm}, 
-      author={Vishwak Srinivasan and Andre Wibisono and Ashia Wilson},
-      year={2024},
-      eprint={2312.08823},
-      archivePrefix={arXiv},
-      primaryClass={stat.CO}
+@InProceedings{srinivasan24a,
+  title = 	 {Fast sampling from constrained spaces using the Metropolis-adjusted Mirror Langevin algorithm},
+  author =       {Srinivasan, Vishwak and Wibisono, Andre and Wilson, Ashia},
+  booktitle = 	 {Proceedings of Thirty Seventh Conference on Learning Theory},
+  pages = 	 {4593--4635},
+  year = 	 {2024},
+  editor = 	 {Agrawal, Shipra and Roth, Aaron},
+  volume = 	 {247},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {30 Jun--03 Jul},
+  publisher =    {PMLR},
 }
 ```
